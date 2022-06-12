@@ -1,6 +1,297 @@
-hr {
-	border: 1px solid grey;
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
 }
-.skils {
-	font-style: italic;
+
+*,
+*:before,
+*:after {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+:focus,
+:active {
+	outline: none;
+}
+
+a:focus,
+a:active {
+	outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+	display: block;
+}
+
+html,
+body {
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+	font-family: inherit;
+}
+
+input::-ms-clear {
+	display: none;
+}
+
+button {
+	cursor: pointer;
+}
+
+button::-moz-focus-inner {
+	padding: 0;
+	border: 0;
+}
+
+a,
+a:visited {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+ul li {
+	list-style: none;
+}
+
+img {
+	vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: inherit;
+	font-weight: inherit;
+}
+
+/*-------обнуляющий стиль-------------*/
+
+@font-face {
+	font-family: 'Tai';
+	src: url("./assets/fonts/Tai_Heritage_Pro/TaiHeritagePro-Regular.ttf");
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: 'Tai';
+	src: url("./assets/fonts/Tai_Heritage_Pro/TaiHeritagePro-Bold.ttf");
+	font-weight: 700;
+}
+
+/*--------подключение шрифтов-----*/
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	font: 400 19px/1.5 'Tai', sans-serif;
+}
+
+.wrapper {
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+
+}
+
+.container {
+	max-width: 1440px;
+	margin: 0 auto;
+
+}
+
+.header {
+
+	/*---градиентная заливка--Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#7abcff+0,60abf8+44,4096ee+100;Blue+3D+%2314 */
+	background: rgb(122, 188, 255);
+	/* Old browsers */
+	background: -moz-linear-gradient(top, rgba(122, 188, 255, 1) 0%, rgba(96, 171, 248, 1) 44%, rgba(64, 150, 238, 1) 100%);
+	/* FF3.6-15 */
+	background: -webkit-linear-gradient(top, rgba(122, 188, 255, 1) 0%, rgba(96, 171, 248, 1) 44%, rgba(64, 150, 238, 1) 100%);
+	/* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, rgba(122, 188, 255, 1) 0%, rgba(96, 171, 248, 1) 44%, rgba(64, 150, 238, 1) 100%);
+	/* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#7abcff', endColorstr='#4096ee', GradientType=0);
+	/* IE6-9 */
+}
+
+
+.section-name {
+	font-size: 25px;
+	font-weight: 700;
+	text-transform: uppercase;
+	margin: 10px;
+}
+
+.section-title {
+	margin: 10px 0px 10px 20px;
+	font-size: 21px;
+	font-weight: 700;
+}
+
+@media (max-width: 768px) {
+	.section {
+		width: 100%;
+	}
+}
+.main-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+section {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 50%;
+}
+
+
+.nav-list {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.nav-link {
+	padding: 0 20px;
+	line-height: 50px;
+	transition: .3s;
+	font-size: 20px;
+	color: #000;
+}
+
+.nav-link:hover {
+	text-decoration: underline;
+	color: white;
+}
+
+.main {
+	padding: 10px 15px;
+	background-color: #72B2E4;
+}
+
+.text {
+	font-weight: bold;
+}
+
+.about {
+	width: 50%;
+}
+
+.img {
+	width: 250px;
+	height: 300px;
+	border-radius: 20%;
+}
+
+.contacts-list li {
+	margin: 0 0 5px 0;
+	padding: 0 0 0 35px;
+	background: url(./assets/icon/icon.png) left no-repeat;
+}
+
+.discord-link,
+.mail-link,
+.github-link {
+	transition: .3s;
+	color: #000;
+}
+
+.discord-link:hover {
+	text-decoration: underline;
+	color: #fff;
+}
+
+.mail-link:hover {
+	text-decoration: underline;
+	color: #fff;
+}
+
+.github-link:hover {
+	text-decoration: underline;
+	color: #fff;
+}
+
+.skills-list li {
+	margin: 0 0 5px 0;
+	padding: 0 0 0 25px;
+	background: url(./assets/icon/li.svg) left no-repeat;
+}
+
+pre {
+	background-color: #E9EFF6;
+}
+
+.languages-list li {
+	padding: 0 0 0 25px;
+	background: url(./assets/icon/li.svg) left no-repeat;
+}
+
+
+.footer {
+	/*---градиентная заливка---Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#1e5799+0,2989d8+50,207cca+51,7db9e8+100;Blue+Gloss+Default */
+	background: #1e5799;
+	/* Old browsers */
+	background: -moz-linear-gradient(top, #1e5799 0%, #2989d8 50%, #207cca 51%, #7db9e8 100%);
+	/* FF3.6-15 */
+	background: -webkit-linear-gradient(top, #1e5799 0%, #2989d8 50%, #207cca 51%, #7db9e8 100%);
+	/* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, #1e5799 0%, #2989d8 50%, #207cca 51%, #7db9e8 100%);
+	/* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1e5799', endColorstr='#7db9e8', GradientType=0);
+	/* IE6-9 */
+
+}
+
+.footer-container {
+	display: flex;
+	height: 70px;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+.github {
+	width: 65px;
+	height: 65px;
+	background-image: url(./assets/logo/github_icon.svg);
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.footer-text {
+	font-weight: bold;
+}
+
+.rss {
+	width: 121px;
+	height: 45px;
+	background-image: url(./assets/logo/rs_school_js.svg);
+	background-size: contain;
+	background-repeat: no-repeat;
 }
